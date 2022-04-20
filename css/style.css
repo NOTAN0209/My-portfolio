@@ -7,13 +7,15 @@
   --main-purpure: #9966cc;
   --main-green: #339966;
   --main-red: #ff0000;
+  --main-orange:#cc6600;
+  --main-white: #fff;
+  --main-black: #000;
 }
 
 nav ul{
   display: flex;
   flex-direction: row;
   justify-content:flex-end;
-  list-style: none;
   padding: 0 3em;
 }
 
@@ -21,8 +23,8 @@ nav ul{
 nav li{
   list-style: none;
   padding: 1em 3em;
-  text-decoration: none;
 }
+
 
 #nav-bar{
   background-color: var(--main-purpure);
@@ -32,6 +34,12 @@ nav li{
   top: 0;
   left: 0;
   width: 100%;
+}
+
+#nav-bar a{
+  text-decoration: none;
+  font-size: 1.5em;
+  color: var(--main-white);
 }
 
 #about{
@@ -47,24 +55,34 @@ nav li{
 #work{
   background-color:var(--main-purpure);
   text-align: center;
-  padding: 10rem 2rem;
-  height: 80vh;
+  padding: 0 auto;
+  height: 85vh;
+}
 
+#center{
+  display: grid;
+  grid-template-areas:"grid grid";
+  grid-gap: 1rem;
 }
 
 #grid {
-  display: grid;
-  grid-template-columns: 210px 200px 200px;
-  grid-gap: 1rem;
-  width: 100%;
+  width: 30%;
+  height: 80%;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+#grid a{
+  text-decoration: none;
 }
 
 #project-title{
   background-color:var(--main-green);
   height: 5vh;
+  color: var(--main-white);
+
 }
+
 
 #img {
   height: calc(100% - 1rem);
@@ -73,38 +91,84 @@ nav li{
 }
 
 #btn{
-  display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
   border-radius: 2px;
+  cursor: pointer;
+  background-color: var(--main-orange);
+  color: var(--main-white);
 }
 
-#contact{
+#btn  a{
+  text-decoration: none;
+}
+
+#contact {
   background-color:var(--main-green);
+  height: 30vh;
+}
+
+#callme{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 30vh;
-  padding: 0 2rem;
+  padding: 2em 4em;
 }
 
+#callme a{
+    text-decoration: none;
+    padding: .5em 4em;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
 
 h1{
   text-align: center;
+  font-size: 1.9em;
+  color:var(--main-white);
 }
+
 p{
   text-align: center;
+  color:var(--main-black);
+  font-size: 1.3em;
+  margin-top: .6em;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 h2{
-  max-width: 640px;
-  margin: 0 auto 6rem auto;
-
+  display: block;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2.7em;
+  color:var(--main-white);
 }
+
 h3{
-  text-align: center
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color:var(--main-white);
+  font-size: 2em;
+  font-weight: 800;
+  padding-top: .8em;
+}
+
+#project-title{
+  font-size: 1em;
+  color:var(--main-white);
+  padding-top: .5em;
+  text-transform: none;
+  text-decoration: none;
 }
 
 footer{
