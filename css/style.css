@@ -19,12 +19,10 @@ nav ul{
   padding: 0 3em;
 }
 
-
 nav li{
   list-style: none;
   padding: 1em 3em;
 }
-
 
 #nav-bar{
   background-color: var(--main-purpure);
@@ -78,11 +76,19 @@ nav li{
 
 #project-title{
   background-color:var(--main-green);
-  height: 5vh;
-  color: var(--main-white);
+  height: 7vh;
+  margin: 0 auto;
+  padding-top: 0;
 
 }
-
+#grid #project-title{
+  color: var(--main-black);
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  padding-top: .5em;
+  text-align: center;
+}
 
 #img {
   height: calc(100% - 1rem);
@@ -103,13 +109,31 @@ nav li{
   color: var(--main-white);
 }
 
-#btn  a{
+#btn a{
   text-decoration: none;
 }
+
+#btn a:link{
+  color: var(--main-green);
+}
+
+#btn a:visited{
+color: var(--main-green);
+}
+
+#btn a:hover{
+color: var(--main-green);
+}
+
+#btn a:active{
+ color: var(--main-green); 
+}
+
 
 #contact {
   background-color:var(--main-green);
   height: 30vh;
+  text-transform: uppercase;
 }
 
 #callme{
@@ -123,10 +147,13 @@ nav li{
 }
 
 #callme a{
-    text-decoration: none;
-    padding: .5em 4em;
-    font-size: 1.8em;
-    text-transform: uppercase;
+  text-decoration: none;
+  padding: .5em 4em;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  color:var(--main-black);
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 h1{
@@ -172,10 +199,13 @@ h3{
 }
 
 footer{
-font-weight: 300;
-display: flex;
-justify-content: space-evenly;
-padding: 2rem;
-background: var(--main-purpure);
-border-top: 4px solid var(--main-red);
+ font-weight: 300;
+ padding: 2rem;
+ background: var(--main-purpure);
+ border-top: 4px solid var(--main-red);
+}
+
+footer p{
+ text-align: right;
+ color:var(--main-white);
 }
