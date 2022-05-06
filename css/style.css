@@ -32,12 +32,30 @@ nav li{
   top: 0;
   left: 0;
   width: 100%;
+  border-bottom: 4px solid var(--main-red);
 }
 
 #nav-bar a{
   text-decoration: none;
   font-size: 1.5em;
   color: var(--main-white);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#nav-bar a:visited{
+color: var(--main-white);
+}
+
+#nav-bar a:hover{
+ background-color: var(--main-orange);
+ height: 2em;
+ weight:3em;
+}
+
+#nav-bar a:active{
+ color: var(--main-white);
 }
 
 #about{
@@ -50,11 +68,17 @@ nav li{
   height: 60vh;
 }
 
+h1{
+  text-align: center;
+  font-size: 3.5em;
+  color:var(--main-white);
+}
+
 #work{
-  background-color:var(--main-purpure);
+  background-color:var(--main-black);
   text-align: center;
   padding: 0 auto;
-  height: 85vh;
+  height: 95vh;
 }
 
 #center{
@@ -68,6 +92,7 @@ nav li{
   height: 80%;
   max-width: 1280px;
   margin: 0 auto;
+  text-align: justify;
 }
 
 #grid a{
@@ -76,17 +101,17 @@ nav li{
 
 #project-title{
   background-color:var(--main-green);
-  height: 7vh;
+  height: 3em;
   margin: 0 auto;
-  padding-top: 0;
-
 }
+
 #grid #project-title{
   color: var(--main-black);
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
   padding-top: .5em;
+  padding-bottom: .5em;
   text-align: center;
 }
 
@@ -106,34 +131,17 @@ nav li{
   border-radius: 2px;
   cursor: pointer;
   background-color: var(--main-orange);
-  color: var(--main-white);
+  margin-top: 2em;
 }
 
 #btn a{
   text-decoration: none;
-}
-
-#btn a:link{
-  color: var(--main-green);
-}
-
-#btn a:visited{
-color: var(--main-green);
+  cursor: pointer;
 }
 
 #btn a:hover{
-color: var(--main-green);
-}
-
-#btn a:active{
- color: var(--main-green); 
-}
-
-
-#contact {
-  background-color:var(--main-green);
-  height: 30vh;
-  text-transform: uppercase;
+ background-color: var(--main-white);
+ height: 40px;
 }
 
 #callme{
@@ -156,11 +164,28 @@ color: var(--main-green);
   font-weight: bold;
 }
 
-h1{
-  text-align: center;
-  font-size: 1.9em;
-  color:var(--main-white);
+#callme a:link{
+  color: var(--main-black);
 }
+
+ #callme a:visited{
+ color: var(--main-black);
+}
+
+#callme a:active{
+ color: var(--main-purpure);
+}
+
+#contact {
+  background-color:var(--main-green);
+  height: 30vh;
+  text-transform: uppercase;
+}
+
+#call-img{
+  weight:1.5em;
+  height: 1.5em;
+  }
 
 p{
   text-align: center;
@@ -178,6 +203,7 @@ h2{
   padding-bottom: 1em;
   font-size: 2.7em;
   color:var(--main-white);
+  text-decoration: underline;
 }
 
 h3{
@@ -201,7 +227,7 @@ h3{
 footer{
  font-weight: 300;
  padding: 2rem;
- background: var(--main-purpure);
+ background: var(--main-green);
  border-top: 4px solid var(--main-red);
 }
 
