@@ -14,25 +14,25 @@
 
 /* nav-bar and header*/
 
-#nav-bar ul{
+#navbar ul{
   display: flex;
   flex-direction: row;
   justify-content:flex-end;
   padding: 0 3em;
 }
 
-#nav-bar li{
+#navbar li{
   list-style: none;
   padding: 1em 3em;
 }
 
 @media (max-width: 800px){
-#nav-bar li {
+#navbar li {
   display: block;
   }
 }
 
-#nav-bar{
+#navbar{
   background-color: var(--main-purpure);
   display: flex;
   justify-content: flex-end;
@@ -44,19 +44,20 @@
 }
 
 @media (max-width: 800px){
- #nav-bar{
+ #navbar{
+  position: fixed;
   font-size: 60%;
   padding: 0 auto;
   }
 }
 
 @media (max-width: 800px){
- #nav-bar li{
+ #navbar li{
   justify-content:space-between;
   }
 }
 
-#nav-bar a{
+#navbar a{
   text-decoration: none;
   font-size: 1.5em;
   color: var(--main-white);
@@ -65,21 +66,21 @@
   font-weight: bold;
 }
 
-#nav-bar a:visited{
+#navbar a:visited{
   color: var(--main-white);
 }
 
-#nav-bar a:hover{
+#navbar a:hover{
  background-color: var(--main-orange);
  height: 2em;
  weight:3em;
 }
 
-#nav-bar a:active{
+#navbar a:active{
  color: var(--main-white);
 }
 
-#about{
+#welcome-section{
   background-color:var(--main-green);
   display: flex;
   flex-direction: column;
@@ -89,6 +90,12 @@
   height: 60vh;
 }
 
+@media (max-width: 800px){
+ #welcome-section{
+   height: 45vh;
+  }
+}
+
 h1{
   text-align: center;
   font-size: 3em;
@@ -96,7 +103,13 @@ h1{
   padding: 0 auto;
 }
 
-p{
+@media (max-width: 800px){
+ h1{
+font-size: 2em;
+  }
+}
+
+p {
   text-align: center;
   color:var(--main-black);
   font-size: 1.3em;
@@ -105,21 +118,29 @@ p{
   text-transform: uppercase;
 }
 
+@media (max-width: 800px){
+ p{
+font-size: 1em;
+  }
+}
+
 /*body and center of site*/
 
-#work{
+body{
+  font-family: 'Poppins', sans-serif;
+  color: var(--main-white);
+}
+
+#projects{
   background-color:var(--main-black);
   text-align: center;
   padding: 0 auto;
-  height: 125vh;
-  position: static;
-}
+  height: 90vh;
+  }
 
 @media (max-width: 800px){
- #work{
-  display: block;
-  weight: 50%;
-  height: 10%;
+ #projects{
+  height:170vh;
   }
 }
 
@@ -134,45 +155,47 @@ h2{
 }
 
 #center{
-  display: grid;
-  grid-template-areas:"grid grid";
+  display: flex;
+  flex-direction: row;
   grid-gap: 1rem;
   padding-bottom: 1em;
-  height: 80%;
-  position: static;
+
 }
 
 @media (max-width: 800px){
  #center {
-  display: grid;
-  grid-template-areas:"grid";
-  weight: 150%;
-  height: 150%;
+  display:flex;
+  flex-direction: column;
+  height: 55vh;
+
   }
 }
 
-#grid {
-  display: block;
-  width: 35%;
-  height: 80%;
-  max-width: 1280px;
+.project-tile {
+  display:flex;
+  flex-direction: column;
   margin: 0 auto;
   text-align: justify;
   padding-top: 2em;
+  height:20vh;
+  margin-top:2em;
+  margin-bottom:-2em;
 }
 
 @media (max-width: 800px){
-#grid {
-  weight:100%;
-  height:100%;
+.project-tile {
+  height:50vh;
+  margin-bottom:-2em;
+  margin-left: 6.5em;
+  
   }
 }
 
-#grid a{
+.project-tile a{
   text-decoration: none;
 }
 
-#project-title{
+.project-title{
   font-size: 1em;
   color:var(--main-white);
   padding-top: .5em;
@@ -183,15 +206,14 @@ h2{
 }
 
 @media (max-width: 800px){
-#project-title {
-  weight:30%;
-  position: static;
+.project-title {
+    position: static;
   margin-left: -3.1em;
   margin-right: -3.2em;
-  }
+    }
 }
 
-#grid #project-title{
+.project-tile .project-title{
   color: var(--main-black);
   text-transform: uppercase;
   font-size: 1.3em;
@@ -199,6 +221,14 @@ h2{
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: center;
+}
+
+@media (max-width: 800px){
+
+.project-tile .project-title {
+   font-size: 1em;
+   margin: 0 0 0 -4em;
+    }
 }
 
 #img {
@@ -225,14 +255,16 @@ h2{
   border-radius: 2px;
   cursor: pointer;
   background-color: var(--main-orange);
-  margin-top: 1em;
+  margin-top: 12em;
   padding-bottom:-3em;
 }
 
 @media (max-width: 800px){
 #btn {
   display:block;
-  margin: 0 auto;
+  margin-top:45em;
+  margin-left:8em;
+
   }
 }
 
@@ -252,12 +284,13 @@ h2{
   background-color:var(--main-green);
   height: 30vh;
   text-transform: uppercase;
-  position:relative;
+  position: static;
 }
 
 @media (max-width: 800px){
 #contact {
   position:static;
+  height: 25vh;
   }
 }
 
@@ -274,7 +307,8 @@ h2{
 @media (max-width: 800px){
 #callme{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+weight:1em;
   height: 4em;
   margin-top: 3em;
   font-size: .8em;
@@ -297,7 +331,7 @@ h2{
 
 @media (max-width: 800px){
  #callme a{
-  margin: 0 auto;
+  font-size: 1.1em;
   }
 }
 
@@ -323,11 +357,14 @@ h2{
 @media (max-width: 800px){
  #call-img{
    margin: 0 auto;
+   weight:.9em;
+   height: .9em;
  }
 }
+
 @media (max-width: 800px){
  #cont{
-   margin: 0 auto;
+  margin-top: -3em;
  }
 }
 
